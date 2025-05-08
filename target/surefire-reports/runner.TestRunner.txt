@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: runner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 16.08 s <<< FAILURE! -- in runner.TestRunner
+DropDown Selection on LetCode Page.Select Options From Various DropDown -- Time elapsed: 14.87 s <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate option with index: 5
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.setSelectedByIndex(Select.java:407)
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:262)
+	at PageObjectModule.DropDownTestPageObjectModule.I_Select_Programming_Language(DropDownTestPageObjectModule.java:29)
+	at StepDefinition.DropDownTestStepDefinition.i_select_the_last_programming_language_from_the_drop_down(DropDownTestStepDefinition.java:32)
+	at ✽.I Select  the Last Programming Language From the DropDown(file:///C:/Users/Stephen/eclipse-workspace/DropDownTest/src/test/java/features/DropDownTest.feature:11)
+
