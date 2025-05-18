@@ -31,6 +31,10 @@ public static WebDriver driver;
 	public void i_select_the_last_programming_language_from_the_drop_down() throws InterruptedException {
 	   calculate.I_Select_Programming_Language();
 	}
+	@When("Select India from DropDown")
+	public void select_india_from_drop_down() {
+	   calculate.SelectCountry();
+	}
 	@Then("I Close the Browser")
 	public void i_close_the_browser() {
 	   calculate.I_Close_The_Browser();

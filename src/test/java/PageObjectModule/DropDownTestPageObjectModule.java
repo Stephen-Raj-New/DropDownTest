@@ -14,11 +14,16 @@ WebDriver driver;
 	
 	@FindBy(xpath= "//select[@id='fruits']")
 	WebElement Select_a_fruit;
+	
     @FindBy(xpath= "//select[@id='lang']")
 	//@FindBy(xpath= "//option[@value='sharp']")
     WebElement Select_a_Programming_Language;
+    
     @FindBy(xpath = "//h1[@class='title has-text-centered is-pulled-left']")
     WebElement DropDown;
+    
+    @FindBy(xpath= "//select[@id= 'country']")
+    WebElement Select_India_Using_Values;
     
     public DropDownTestPageObjectModule(WebDriver driver) {
     	this.driver = driver;
@@ -43,6 +48,10 @@ WebDriver driver;
     	JavascriptExecutor js2 = (JavascriptExecutor) driver;
     	js2.executeScript("arguments[0].scrollIntoView(true);", DropDown);
     	
+    }
+    public void SelectCountry() {
+    	Select Country = new Select(Select_India_Using_Values);
+    	Country.selectByValue("India");
     }
     public void I_Close_The_Browser() {
     	driver.close();
